@@ -44,74 +44,44 @@ const About = () => {
       id="about"
       className="container mx-auto flex flex-col items-center justify-center bg-lightDesert min-h-screen"
     >
-      <animated.img
-        style={{ ...springProps }}
-        src="images/profile.jpg"
-        alt="Sara"
-        className="rounded-full w-64 h-64 border-4 border-darkDesert object-cover mb-8 mt-20"
-        onMouseEnter={() => setScale(1.1)}
-        onMouseLeave={() => setScale(1)}
-      />
+     <animated.img
+  style={{ ...springProps }}
+  src="https://i.postimg.cc/ncMGRk12/photo.jpg" // Replace this path
+  alt="Raveena"
+  className="rounded-full w-64 h-64 border-4 border-darkDesert object-cover mb-8 mt-20"
+  onMouseEnter={() => setScale(1.1)}
+  onMouseLeave={() => setScale(1)}
+/>
       <animated.div style={slideUp}>
-        <h1 className="text-4xl font-bold text-darkDesert mb-4 text-center px-8">
-          Sara Baqla
-        </h1>
-        <p className="text-lg text-darkDesert mb-4 text-center px-8">
-          As a science-loving, code-wielding full-stack web developer, I create user-friendly apps with serious impact. My systematic problem-solving skills were fine-tuned at UT Austin's web development boot camp. I'm resourceful and always staying up to date with the latest trends.
-        </p>
-        <p className="text-lg text-darkDesert mb-4 text-center px-8">
-          But wait, there's more! I'm not just a coding maestro; I also play the trumpet! For two decades, I've performed with various groups across multiple genres, putting a smile on people's faces and a beat in their feet. Some of my heroes? Freddie Hubbard, Clifford Brown, Miles Davis, and Dizzy Gillespie. I've even shared my wisdom as a trumpet tutor, shaping the next generation of brass warriors.
-        </p>
-        <p className="text-lg text-darkDesert mb-4 text-center px-8">
-          When I'm not jamming or coding, I'm an outdoor enthusiast and bookworm
-          extraordinaire. From hanging out in trees to diving into captivating
-          reads, I seize every moment. My most epic adventures?{" "}
-          <a
-            className="text-tealDesert hover:text-goldDesert transition-colors duration-300"
-            href="https://www.fs.usda.gov/recarea/stnf/recarea/?recid=6521"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Trinity Alps Wilderness
-          </a>
-          ,{" "}
-          <a
-            className="text-tealDesert hover:text-goldDesert transition-colors duration-300"
-            href="https://www.nps.gov/romo/index.htm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Rocky Mountain National Park
-          </a>
-          , and{" "}
-          <a
-            className="text-tealDesert hover:text-goldDesert transition-colors duration-300"
-            href="https://www.nps.gov/arch/index.htm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Arches National Park
-          </a>{" "}
-          --pure bliss!
-        </p>
+  <h1 className="text-4xl font-bold text-darkDesert mb-4 text-center px-8">
+    Raveena Putta
+  </h1>
 
-        <p className="text-lg text-darkDesert mb-4 text-center px-8">
-          Let's collab!
-        </p>
-        <div className="flex justify-center items-center pb-8">
-          <Anchor href={GITHUB_URL}>
-            <FaGithub size={32} />
-          </Anchor>
-          <Anchor href={LINKEDIN_URL}>
-            <FaLinkedin size={32} />
-          </Anchor>
-          {/* <Anchor href={PERPLEXITY_URL}>
-            <SiPerplexity size={32} />
-          </Anchor> */}
-        </div>
-        <div>
-        </div>
-      </animated.div>
+  <p className="text-lg text-darkDesert mb-4 text-center px-8">
+    I'm Raveena, a frontend-focused software engineer with a strong foundation in React, JavaScript, and UI design. 
+    With over 2 years of experience at Grow Indigo, I’ve built scalable dashboards, mobile apps, and reusable UI components 
+    that power real-time experiences for thousands of users.
+  </p>
+
+  <p className="text-lg text-darkDesert mb-4 text-center px-8">
+    I love turning ideas into beautiful, functional interfaces and am continuously learning through hands-on projects and the Scaler Academy. 
+    When I’m not coding, you’ll find me exploring new tech trends or writing blogs to share what I learn.
+  </p>
+
+  <p className="text-lg text-darkDesert mb-4 text-center px-8">
+    Let's build something great together!
+  </p>
+
+  <div className="flex justify-center items-center pb-8">
+    <Anchor href="https://github.com/Raveena5597">
+      <FaGithub size={32} />
+    </Anchor>
+    <Anchor href="https://www.linkedin.com/in/raveena-vallala-b59126126/">
+      <FaLinkedin size={32} />
+    </Anchor>
+  </div>
+</animated.div>
+
     </animated.div>
   );
 };

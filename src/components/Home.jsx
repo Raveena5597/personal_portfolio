@@ -34,80 +34,50 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="container mx-auto bg-lightDesert flex flex-col items-center justify-center min-h-screen"
+      className="container mx-auto bg-lightDesert flex flex-col items-center justify-center min-h-screen px-4"
     >
-      <animated.img
-        style={logoSpring}
-        className="w-fit mb-4"
-        src={landingImg}
-        alt="Trumpet with tentacle logo"
-      />
-
-      <animated.div style={iconSpring} className="flex flex-col mt-2 space-x-6">
-        <div className="flex mt-2 space-x-6">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={GITHUB_URL}
-            className="text-darkDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <FaGithub className="w-10 h-10" />
-            <span className="sr-only">GitHub account</span>
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={LINKEDIN_URL}
-            className="text-darkDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <FaLinkedin className="w-10 h-10" />
-            <span className="sr-only">LinkedIn account</span>
-          </a>
-          {/* <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={PERPLEXITY_URL}
-            className="text-darkDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <SiPerplexity className="w-10 h-10" />
-            <span className="sr-only">Resume</span>
-          </a> */}
-          {/* <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={YOUTUBE_URL}
-            className="text-darkDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <FaYoutube className="w-10 h-10" />
-            <span className="sr-only">YouTube Channel</span>
-          </a> */}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={RESUME_URL}
-            className="text-darkDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <FaFileAlt className="w-10 h-10" />
-            <span className="sr-only">Resume</span>
-          </a>
-          {/* <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={BLOG_URL}
-            className="text-darkDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <FaBlog className="w-10 h-10" />
-            <span className="sr-only">Blog</span>
-          </a> */}
-        </div>
-        {/* <div class="pt-6">
-          <a href={PERPLEXITY_URL}
-            class="inline-block px-4 py-2 bg-tealDesert text-white rounded-full text-sm font-semibold hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
-            Get $10 off Perplexity
-          </a>
-
-        </div> */}
+      <animated.div style={logoSpring} className="text-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-darkDesert mb-4">
+          Hi, I'm <span className="text-pink-600">Raveena Putta</span>
+        </h1>
+        <p className="text-lg md:text-xl text-darkDesert">
+          Frontend Developer & Tech Blogger ✨
+        </p>
+      </animated.div>
+  
+      <animated.div
+        style={iconSpring}
+        className="flex mt-8 space-x-6 justify-center"
+      >
+        <a
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-darkDesert hover:text-pink-600 transition-colors duration-300"
+        >
+          <FaGithub className="w-8 h-8" />
+          <span className="sr-only">GitHub</span>
+        </a>
+        <a
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-darkDesert hover:text-pink-600 transition-colors duration-300"
+        >
+          <FaLinkedin className="w-8 h-8" />
+          <span className="sr-only">LinkedIn</span>
+        </a>
+        <a
+          href={RESUME_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-darkDesert hover:text-pink-600 transition-colors duration-300"
+        >
+          <FaFileAlt className="w-8 h-8" />
+          <span className="sr-only">Resume</span>
+        </a>
       </animated.div>
     </div>
   );
+  
 }

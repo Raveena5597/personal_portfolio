@@ -23,7 +23,15 @@ const ProjectModal = ({ project, isOpen, closeModal }) => (
         <h3 className="text-darkDesert text-2xl sm:text-3xl font-bold mb-4">
           {project.title}
         </h3>
-        <p className="text-darkDesert mb-4">{project.description}</p>
+        <div className="text-darkDesert mb-4">
+  <p className="mb-2">{project.description}</p>
+  {project.tech && (
+    <p className="text-sm text-gray-600">
+      <strong>Tech Stack:</strong> {project.tech}
+    </p>
+  )}
+</div>
+
         <p className="text-darkDesert font-bold mb-4">{project.date}</p>
         <div className="flex justify-between items-center">
           {project.github ? (

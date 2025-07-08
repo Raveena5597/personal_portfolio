@@ -28,16 +28,17 @@ export default function NavBar() {
     <header>
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-darkDesert fixed top-0 w-full z-50">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <Link to="/" className="flex items-center">
-            <img
-              src="/dev-icon.svg"
-              className="mr-3 h-6 sm:h-9"
-              alt="Sara Dev Logo"
-            />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              sarabaqla.dev
-            </span>
-          </Link>
+        <Link to="/" className="flex items-center">
+        <img
+          src="/raveena-icon.svg" // optional: your icon
+          className="mr-3 h-6 sm:h-9"
+          alt="Raveena Dev Logo"
+         />
+        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+          raveena.dev
+        </span>
+        </Link>
+
           <div className="flex items-center lg:order-2">
             <button
               onClick={toggleOpen}
