@@ -24,7 +24,7 @@ function App() {
       <Analytics />
       <ToastContainer />
       <Router>
-        <div className="bg-lightDesert">
+      <div className="h-screen overflow-y-scroll">
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />

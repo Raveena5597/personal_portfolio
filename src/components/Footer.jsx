@@ -1,58 +1,65 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiPerplexity } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import {
   GITHUB_URL,
   LINKEDIN_URL,
+  RESUME_URL,
   PERSONAL_WEBSITE_URL,
   CURRENT_YEAR,
-  PERPLEXITY_URL,
 } from "../constants/index";
 
 export default function Footer() {
   return (
-    <footer className="bg-darkDesert">
-      <div className="flex flex-col items-center justify-center py-2 px-2 sm:flex-row sm:justify-between sm:py-4 sm:px-6">
-        <span className="text-sm text-lightDesert sm:text-center">
+    <footer className="bg-purple-100 text-gray-700 text-sm py-4 px-6 flex flex-col sm:flex-row justify-between items-center shadow-inner">
+      {/* Left side: Copyright */}
+      <div className="mb-3 sm:mb-0">
+        <span>
           © {CURRENT_YEAR}{" "}
           <a
+            href={PERSONAL_WEBSITE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            href={PERSONAL_WEBSITE_URL}
-            className="hover:text-goldDesert transition-colors duration-300"
+            className="font-medium hover:text-pink-600 transition-colors duration-300"
           >
-            sarabaqla.dev
+            raveenawrites.com
           </a>
         </span>
-        <div className="flex mt-2 space-x-6">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={GITHUB_URL}
-            className="text-lightDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <FaGithub className="w-5 h-5" />
-            <span className="sr-only">GitHub account</span>
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={LINKEDIN_URL}
-            className="text-lightDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <FaLinkedin className="w-5 h-5" />
-            <span className="sr-only">LinkedIn account</span>
-          </a>
-          {/* <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={PERPLEXITY_URL}
-            className="text-lightDesert hover:text-goldDesert transition-colors duration-300"
-          >
-            <SiPerplexity className="w-5 h-5" />
-            <span className="sr-only">Perplexity Referral</span>
-          </a> */}
-        </div>
+      </div>
+
+      {/* Right side: Icons + Button */}
+      <div className="flex items-center space-x-6">
+        <a
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-pink-600 transition duration-300"
+        >
+          <FaGithub className="w-5 h-5" />
+        </a>
+        <a
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-pink-600 transition duration-300"
+        >
+          <FaLinkedin className="w-5 h-5" />
+        </a>
+        <a
+          href={RESUME_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-pink-600 transition duration-300"
+        >
+          <FaFileAlt className="w-5 h-5" />
+        </a>
+
+        {/* View Projects Button */}
+        <a
+          href="#projects"
+          className="ml-4 inline-block bg-pink-600 text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-pink-700 transition-all duration-300"
+        >
+          View My Projects
+        </a>
       </div>
     </footer>
   );
