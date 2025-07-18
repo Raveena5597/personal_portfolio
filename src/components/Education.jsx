@@ -2,52 +2,41 @@ import React from "react";
 import schools from "../constants/schools.json";
 import { useSpring, animated, useTrail } from "react-spring";
 
-// create School component that receives a school object as props. Render method becomes more readable
-const School = ({ school, imageStyle }) => (
-  <div className="mb-4 flex items-center">
-    <animated.img
-      style={imageStyle}
-      src={school.img}
-      alt={school.university}
-      className="h-12 w-auto mr-4"
-    />
-    <div>
-      <h3 className="text-xl font-semibold text-darkDesert">{school.degree}</h3>
-      <p className="text-lg text-darkDesert">{school.university}</p>
-      <p className="text-darkDesert">{school.timePeriod}</p>
-    </div>
-  </div>
+const School = ({ school, style }) => (
+  <animated.div
+    style={style}
+    className="bg-white/70 backdrop-blur-md p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 mb-6 max-w-2xl w-full mx-auto"
+  >
+    <h3 className="text-xl font-semibold text-purple-700 mb-1">{school.degree}</h3>
+    <p className="text-md text-gray-800">{school.university}</p>
+    <p className="text-sm text-gray-500">{school.timePeriod}</p>
+  </animated.div>
 );
 
 export default function Education() {
-  const educationSpring = useSpring({
-    from: { opacity: 0, transform: "scale(0.5)" },
-    to: { opacity: 1, transform: "scale(1)" },
+  const fadeIn = useSpring({
+    from: { opacity: 0, transform: "translateY(40px)" },
+    to: { opacity: 1, transform: "translateY(0)" },
   });
 
-  const imageTrails = useTrail(schools.length, {
-    from: { transform: "translate3d(-100%,0,0) rotate(-360deg)", opacity: 0 },
-    to: { transform: "translate3d(0%,0,0) rotate(0deg)", opacity: 1 },
+  const trails = useTrail(schools.length, {
+    from: { opacity: 0, transform: "translateY(20px)" },
+    to: { opacity: 1, transform: "translateY(0)" },
+    config: { mass: 5, tension: 1200, friction: 80 },
+    delay: 300,
   });
 
   return (
     <animated.section
       id="education"
-      className="bg-lightDesert p-8 rounded-lg shadow-md w-full mx-auto flex flex-col items-center justify-center h-screen"
-      style={educationSpring}
+      className="min-h-screen px-6 py-16 bg-gradient-to-b from-white via-pink-50 to-blue-50 flex flex-col items-center justify-start"
+      style={fadeIn}
     >
-      <div>
-        <h2 className="text-4xl font-bold text-darkDesert mb-4 text-center">
-          Education
-        </h2>
-        {schools.map((school, index) => (
-          <School
-            key={school.id}
-            school={school}
-            imageStyle={imageTrails[index]}
-          />
-        ))}
-      </div>
+      <h2 className="text-4xl font-bold text-darkDesert mb-10">Education</h2>
+
+      {schools.map((school, index) => (
+        <School key={school.id} school={school} style={trails[index]} />
+      ))}
     </animated.section>
   );
 }

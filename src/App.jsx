@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+
 import {
   NavBar,
   Home,
   About,
   Projects,
   Skills,
-  Experience,
+  Blog,
   Education,
   ContactMe,
   Footer,
@@ -20,26 +21,30 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <Router>
       <Analytics />
       <ToastContainer />
-      <Router>
-      <div className="h-screen overflow-y-scroll">
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/contact" element={<ContactMe />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
-    </>
+
+      {/* Navbar always visible */}
+      <NavBar />
+
+      {/* Page content below navbar */}
+      <main className="pt-12">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/contact" element={<ContactMe />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+
+      {/* Footer always visible */}
+      <Footer />
+    </Router>
   );
 }
 

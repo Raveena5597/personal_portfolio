@@ -60,41 +60,26 @@ export default function Home() {
       </div>
       {/* Main Content */}
       <div
-      id="home"
-      className="relative z-10 container mx-auto flex flex-col items-center justify-start px-4 pt-20 pb-10 text-center space-y-6"
-    >
-
+        id="home"
+        className="relative z-10 container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-64px)] px-10 text-center"
+      >
         <animated.img
           src={heroImg}
           alt="Raveena working"
           style={imageSpring}
-          className="w-full md:w-[800px] h-[500px] mb-6 shadow-lg rounded-lg"
+          className="w-full md:w-[800px] h-[470px] mb-6 shadow-lg rounded-lg"
         />
 
         <animated.div style={logoSpring} className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
             Hi, I’m <span className="text-purple-400">Raveena</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
-            A self-taught Full Stack Developer, rebuilding her tech dreams after a break.  
-            I blend clean code with powerful AI tools to craft elegant, modern web experiences.
-          </p>
-        </animated.div>
+          <blockquote className="italic text-gray-700 text-lg mt-6 max-w-2xl mx-auto border-l-4 border-pink-400 pl-6 leading-relaxed bg-white/50 backdrop-blur-sm p-4 rounded-md shadow-sm">
+            “Once a curious little girl staring at glowing computer screens…  
+            now a woman turning dreams into deploys — writing code that speaks, connects, and inspires.” ✨
+          </blockquote>
 
-        <div className="flex flex-wrap justify-center gap-3 mt-6">
-          <span className="bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-medium">
-            Full Stack Developer
-          </span>
-          <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium">
-            React & Node.js
-          </span>
-          <span className="bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium">
-            AI-Savvy Coder
-          </span>
-          <span className="bg-yellow-100 text-yellow-600 px-4 py-2 rounded-full text-sm font-medium">
-            Former Frontend Engineer
-          </span>
-        </div>
+        </animated.div>
       </div>
     </div>
   );

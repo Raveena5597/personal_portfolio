@@ -3,10 +3,10 @@
     "id": 1,
     "title": "IMDB Explorer",
     "description": "A movie search application using the IMDB API. Allows users to search, sort, and view movie details.",
-    "date": "2024",
+    "date": "2025",
     "github": "https://github.com/Raveena5597",
-    "deployed": "#",
-    "thumbnail": "/images/imdb.jpg"
+   "deployed": "https://raveenaboard.netlify.app",
+  "thumbnail": "/images/imdb-thumb.png"
   },
   {
     "id": 2,
@@ -14,16 +14,25 @@
     "description": "A weather forecasting app that shows current weather, temperature, and forecasts using OpenWeatherMap API.",
     "date": "2024",
     "github": "https://github.com/Raveena5597/weather-app",
-    "deployed": "#",
-    "thumbnail": "/images/weather.jpg"
+   "deployed": "https://raveenaboard.netlify.app",
+  "thumbnail": "/images/weather-thumb.png"
   },
   {
     "id": 3,
     "title": "Kanban Task Manager",
     "description": "A drag-and-drop Kanban board to manage tasks with local storage support.",
-    "date": "2024",
+    "date": "2025",
     "github": "https://github.com/Raveena5597/kanban-board",
-    "deployed": "#",
-    "thumbnail": "/images/kanban.jpg"
+   "deployed": "https://raveenaboard.netlify.app",
+  "thumbnail": "/images/kanban-thumb.png"
+  },
+  {
+    "id": 4,
+    "title": "E-Commerce Web App",
+    "description": "A fully responsive e-commerce frontend with product listings, cart management, and modern UI styling.",
+    "github": "https://github.com/Raveena5597/ECommerceProject",
+   "deployed": "https://raveenaboard.netlify.app",
+  "thumbnail": "/images/ecom-thumb.png"
   }
+  
 ]

@@ -1,21 +1,28 @@
 [{
   "id": 1,
-  "degree": "Web Development Certificate",
-  "university": "The University of Texas at Austin",
-  "timePeriod": "June 2022 - September 2022",
+  "degree": "Fullstack Development Certification",
+  "university": "Scaler Academy",
+  "timePeriod": "September 2023 - Present",
   "img": "images/longhorns.jpg"
 },
 {
   "id": 2,
-  "degree": "M.S. Biological Sciences",
-  "university": "The University of Texas at El Paso",
-  "timePeriod": "August 2014 - May 2017",
+  "degree": "Worked as Software Development Engineer - 1",
+  "university": "Grow Indigo pvt ltd",
+  "timePeriod": "December 2020 - March 2023",
   "img": "images/pick.png"
 },
 {
   "id": 3,
-  "degree": "B.S. Ecology & Evolutionary Biology",
-  "university": "The University of Texas at El Paso",
-  "timePeriod": "August 2009 - May 2014",
+  "degree": "B.Tech. Computer Science and Engineering",
+  "university": "Jawaharlal Nehru Technological University, Hyderabad",
+  "timePeriod": "August 2014 - May 2018",
+  "img": "images/pick.png"
+},
+{
+  "id": 4,
+  "degree": "Intermediate Education",
+  "university": "Sri Chaitanya Junior College",
+  "timePeriod": "June 2012 - May 2014",
   "img": "images/pick.png"
 }]
