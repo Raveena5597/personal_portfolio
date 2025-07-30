@@ -4,8 +4,8 @@
     "title": "IMDB Explorer",
     "description": "A movie search application using the IMDB API. Allows users to search, sort, and view movie details.",
     "date": "2025",
-    "github": "https://github.com/Raveena5597",
-   "deployed": "https://raveenaboard.netlify.app",
+    "github": "https://github.com/Raveena5597/imdb-project.git",
+   "deployed": "https://imdb-project-rose.vercel.app/",
   "thumbnail": "/images/imdb-thumb.png"
   },
   {
@@ -13,8 +13,8 @@
     "title": "Weather App",
     "description": "A weather forecasting app that shows current weather, temperature, and forecasts using OpenWeatherMap API.",
     "date": "2024",
-    "github": "https://github.com/Raveena5597/weather-app",
-   "deployed": "https://raveenaboard.netlify.app",
+    "github": "https://github.com/Raveena5597/weather-app.git",
+   "deployed": "https://weather-app-pearl-tau-26.vercel.app/",
   "thumbnail": "/images/weather-thumb.png"
   },
   {
@@ -22,16 +22,16 @@
     "title": "Kanban Task Manager",
     "description": "A drag-and-drop Kanban board to manage tasks with local storage support.",
     "date": "2025",
-    "github": "https://github.com/Raveena5597/kanban-board",
-   "deployed": "https://raveenaboard.netlify.app",
+    "github": "https://github.com/Raveena5597/kanban-board.git",
+   "deployed": "https://kanban-board-three-pink.vercel.app/",
   "thumbnail": "/images/kanban-thumb.png"
   },
   {
     "id": 4,
     "title": "E-Commerce Web App",
     "description": "A fully responsive e-commerce frontend with product listings, cart management, and modern UI styling.",
-    "github": "https://github.com/Raveena5597/ECommerceProject",
-   "deployed": "https://raveenaboard.netlify.app",
+    "github": "https://github.com/Raveena5597/ECommerceProject.git",
+   "deployed": "https://e-commerce-project-bay-one.vercel.app/",
   "thumbnail": "/images/ecom-thumb.png"
   }
   
