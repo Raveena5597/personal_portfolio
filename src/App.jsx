@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,14 +21,12 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <>
       <Analytics />
       <ToastContainer />
 
-      {/* Navbar always visible */}
       <NavBar />
 
-      {/* Page content below navbar */}
       <main className="pt-12">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -42,9 +40,8 @@ function App() {
         </Routes>
       </main>
 
-      {/* Footer always visible */}
       <Footer />
-    </Router>
+    </>
   );
 }
 
