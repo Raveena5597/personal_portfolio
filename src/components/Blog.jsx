@@ -12,19 +12,19 @@ const blogPosts = [
     title: "All about variables and data types in JavaScript",
     excerpt:
       "Understanding variables and data types is crucial for mastering JavaScript. This post covers the basics, including how to declare variables, the different data types available, and best practices for using them effectively.",
-    link: "https://blog.raveenawrites.com/variables-and-datatypes-in-javascript"
+    link: "https://blog.raveenawrites.com/variables-and-datatypes-in-javascript",
   },
   {
     title: "JavaScript Quirks",
     excerpt:
       "Important quirks in JavaScript that every developer should know. This post covers common pitfalls, unexpected behaviors, and how to avoid them in your code.",
-    link: "https://blog.raveenawrites.com/javascript-quirks"
+    link: "https://blog.raveenawrites.com/javascript-quirks",
   },
   {
-    title: "Fucntions in JavaScript",
+    title: "Functions in JavaScript",
     excerpt:
       "Functions are a fundamental part of JavaScript, allowing you to encapsulate code for reuse. This post explains how functions work, different types of functions, and best practices for using them effectively.",
-    link: " https://blog.raveenawrites.com/all-about-functions-in-js",
+    link: "https://blog.raveenawrites.com/all-about-functions-in-js",
   },
   {
     title: "Callback functions and their features",
@@ -37,9 +37,8 @@ const blogPosts = [
     excerpt:
       "Here’s how I made a comeback into tech — and everything I learned on the way.",
     link: "https://hercomebackstory.hashnode.dev/breaking-into-full-stack-development-after-a-break-my-comeback-story",
-    featured: true,
+    featured: true, // mark this as featured
   },
-  
 ];
 
 export default function Blog() {
@@ -58,19 +57,32 @@ export default function Blog() {
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {blogPosts.map((post, index) => (
           <div
-          key={index}
-          className={`bg-white rounded-lg p-6 text-left transition-all duration-300 border
-            ${
+            key={index}
+            className={`relative bg-white rounded-lg shadow-md p-6 text-left hover:shadow-xl transition-all duration-300 border ${
               post.featured
-                ? "border-pink-400 shadow-xl scale-[1.02]"
-                : "border-purple-100 shadow-md hover:shadow-xl"
-            }
-          `}
-        >
-            <h3 className="text-xl font-semibold text-darkDesert mb-2">
+                ? "border-pink-500 scale-[1.02]"
+                : "border-purple-100"
+            }`}
+          >
+            {post.featured && (
+              <div className="absolute top-3 right-3 bg-purple-500 text-white text-[10px] font-semibold px-2 py-1 rounded uppercase tracking-wider">
+                Must Read
+              </div>
+            )}
+            <h3
+              className={`text-xl font-semibold mb-2 ${
+                post.featured ? "text-pink-600" : "text-darkDesert"
+              }`}
+            >
               {post.title}
             </h3>
-            <p className="text-sm text-gray-600 mb-4">{post.excerpt}</p>
+            <p
+              className={`text-sm mb-4 ${
+                post.featured ? "text-gray-700" : "text-gray-600"
+              }`}
+            >
+              {post.excerpt}
+            </p>
             <a
               href={post.link}
               target="_blank"
