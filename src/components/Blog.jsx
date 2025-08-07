@@ -97,7 +97,7 @@ export default function Blog() {
 
       <div className="mt-10">
         <a
-          href="https://blog.raveenawrites.com/"
+          href="https://hashnode.com/@RaveenaPutta"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-3 bg-pink-500 text-white rounded-full font-medium hover:bg-purple-500 transition-all duration-300"
