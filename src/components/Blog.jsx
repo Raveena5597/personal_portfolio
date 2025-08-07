@@ -37,6 +37,7 @@ const blogPosts = [
     excerpt:
       "Here’s how I made a comeback into tech — and everything I learned on the way.",
     link: "https://hercomebackstory.hashnode.dev/breaking-into-full-stack-development-after-a-break-my-comeback-story",
+    featured: true,
   },
   
 ];
@@ -57,9 +58,15 @@ export default function Blog() {
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {blogPosts.map((post, index) => (
           <div
-            key={index}
-            className="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-xl transition-all duration-300 border border-purple-100"
-          >
+          key={index}
+          className={`bg-white rounded-lg p-6 text-left transition-all duration-300 border
+            ${
+              post.featured
+                ? "border-pink-400 shadow-xl scale-[1.02]"
+                : "border-purple-100 shadow-md hover:shadow-xl"
+            }
+          `}
+        >
             <h3 className="text-xl font-semibold text-darkDesert mb-2">
               {post.title}
             </h3>
