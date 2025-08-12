@@ -11,8 +11,8 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-purple-100 text-gray-700 text-sm py-4 px-6 flex flex-col sm:flex-row justify-between items-center shadow-inner">
-      {/* Left side: Copyright */}
-      <div className="mb-3 sm:mb-0">
+      {/* Left side: Copyright + Privacy */}
+      <div className="mb-3 sm:mb-0 flex items-center gap-4">
         <span>
           © {CURRENT_YEAR}{" "}
           <a
@@ -24,6 +24,12 @@ export default function Footer() {
             raveenawrites.com
           </a>
         </span>
+        <a
+          href="/privacy-policy"
+          className="hover:text-pink-600 transition-colors duration-300"
+        >
+          Privacy Policy
+        </a>
       </div>
 
       {/* Right side: Icons + Button */}
