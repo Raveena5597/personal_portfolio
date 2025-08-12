@@ -41,9 +41,9 @@ export default function Home() {
         <ReactConfetti
           width={width}
           height={height}
-          numberOfPieces={200}
+          numberOfPieces={400}
           recycle={true}
-          gravity={0.02}
+          gravity={0.01}
           wind={0}
           colors={["#fbcfe8", "#c7d2fe", "#bbf7d0", "#fde68a", "#bae6fd"]}
         />
@@ -51,14 +51,11 @@ export default function Home() {
 
       {/* blobs Background */}
       <div className="animated-bg">
-        <div className="blob blob1"></div>
-        <div className="blob blob2"></div>
-        <div className="blob blob3"></div>
-        <div className="blob blob4"></div>
-        <div className="blob blob5"></div>
-        <div className="blob blob6"></div>
-        <div className="blob blob7"></div>
-      </div>
+  {Array.from({ length: 30 }).map((_, i) => (
+    <div key={i} className={`blob blob${i + 1}`}></div>
+  ))}
+</div>
+
 
       {/* Hero Section */}
       <div
