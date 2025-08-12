@@ -25,7 +25,7 @@ export default function Footer() {
           </a>
         </span>
         <a
-          href="/privacy-policy"
+          href="../components/PrivacyPolicy.jsx"
           className="hover:text-pink-600 transition-colors duration-300"
         >
           Privacy Policy
