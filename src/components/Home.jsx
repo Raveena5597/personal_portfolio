@@ -4,7 +4,7 @@ import ReactConfetti from "react-confetti";
 import { useWindowSize } from "@react-hook/window-size";
 import heroImg from "/images/landing.png";
 import projects from "../constants/projects.json";
-import blogPosts from "../constants/blogs"; // Make sure blogs.js exports the array
+import blogPosts from "../constants/blogPosts"; 
 
 export default function Home() {
   const [width, height] = useWindowSize();
