@@ -61,7 +61,7 @@ export default function Footer() {
 
         {/* View Projects Button */}
         <a
-          href="#projects"
+          href="../components/Projects.jsx"
           className="ml-4 inline-block bg-pink-600 text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-pink-700 transition-all duration-300"
         >
           View My Projects
