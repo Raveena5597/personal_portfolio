@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   GITHUB_URL,
   LINKEDIN_URL,
@@ -9,6 +10,18 @@ import {
 } from "../constants/index";
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goToProjects = () => {
+    if (location.pathname === "/projects") {
+      // Already on projects page — scroll to top just in case
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/projects");
+    }
+  };
+
   return (
     <footer className="bg-purple-100 text-gray-700 text-sm py-4 px-6 flex flex-col sm:flex-row justify-between items-center shadow-inner">
       {/* Left side: Copyright + Privacy */}
@@ -24,12 +37,12 @@ export default function Footer() {
             raveenawrites.com
           </a>
         </span>
-        <a
-          href="../components/PrivacyPolicy.jsx"
+        <Link
+          to="/privacy-policy"
           className="hover:text-pink-600 transition-colors duration-300"
         >
           Privacy Policy
-        </a>
+        </Link>
       </div>
 
       {/* Right side: Icons + Button */}
@@ -60,12 +73,12 @@ export default function Footer() {
         </a>
 
         {/* View Projects Button */}
-        <a
-          href="../components/Projects.jsx"
+        <button
+          onClick={goToProjects}
           className="ml-4 inline-block bg-pink-600 text-white text-xs font-medium px-4 py-2 rounded-full hover:bg-pink-700 transition-all duration-300"
         >
           View My Projects
-        </a>
+        </button>
       </div>
     </footer>
   );

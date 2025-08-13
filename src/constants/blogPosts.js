@@ -37,6 +37,18 @@ const blogPosts = [
     link: "https://hercomebackstory.hashnode.dev/breaking-into-full-stack-development-after-a-break-my-comeback-story",
     featured: true,
   },
+  {
+    title: "Operators in JavaScript — Every JavaScript Operator Explained Super Simply",
+    excerpt:
+      "Operators are the building blocks of JavaScript, allowing you to perform operations on variables and values. This post covers all the essential operators in JavaScript, including arithmetic, comparison, logical, and more.",
+    link: "https://blog.raveenawrites.com/operators-in-javascript-every-javascript-operator-explained-super-simply",
+  },
+  {
+    title: "Control Flow in JavaScript: Conditionals & Loops — Made Super Simple",
+    excerpt:
+      "Control flow is a fundamental concept in JavaScript that allows you to control the execution of your code based on certain conditions. This post explains how conditionals and loops work in JavaScript, with examples and best practices.",
+    link: "https://blog.raveenawrites.com//control-flow-in-javascript-conditionals-and-loops-made-super-simple",
+  },
 ];
 
 export default blogPosts;

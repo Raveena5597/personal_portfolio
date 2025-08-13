@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import PrivacyPolicy from "./components/PrivacyPolicy"; 
 
 import {
   NavBar,
@@ -37,6 +38,7 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<ContactMe />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
 
