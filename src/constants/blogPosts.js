@@ -47,7 +47,22 @@ const blogPosts = [
     title: "Control Flow in JavaScript: Conditionals & Loops — Made Super Simple",
     excerpt:
       "Control flow is a fundamental concept in JavaScript that allows you to control the execution of your code based on certain conditions. This post explains how conditionals and loops work in JavaScript, with examples and best practices.",
-    link: "https://blog.raveenawrites.com//control-flow-in-javascript-conditionals-and-loops-made-super-simple",
+    link: "https://blog.raveenawrites.com/control-flow-in-javascript-conditionals-and-loops-made-super-simple",
+
+  },
+  {
+    title: "Understanding Scope & Hoisting in JavaScript (With Fun Examples)",
+    excerpt:
+      "Scope and hoisting are two fundamental concepts in JavaScript that every developer should understand. This post explains what scope is, how it works, and how hoisting affects variable declarations and function definitions.",
+    link: "https://blog.raveenawrites.com/understanding-scope-and-hoisting-in-javascript-with-fun-examples",
+
+  },
+  {
+    title: "JavaScript Arrays: Everything from Basics to Magic Tricks",
+    excerpt:
+      "Arrays are a powerful data structure in JavaScript that allow you to store and manipulate collections of data. This post covers everything you need to know about arrays, from basic operations to advanced techniques.",
+    link: "https://blog.raveenawrites.com/javascript-arrays",
+
   },
 ];
 
